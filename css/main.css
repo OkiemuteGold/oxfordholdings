@@ -11,6 +11,10 @@
   border-radius: 0;
 }
 
+.header .logo-img {
+  width: 90px;
+}
+
 #hero {
   height: 100vh;
   background: linear-gradient(
