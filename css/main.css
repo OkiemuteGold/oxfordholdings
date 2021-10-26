@@ -1,0 +1,267 @@
+.navbar {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+#hero {
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  padding: 170px 60px 0px 150px;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.hero_content h1 {
+  font-size: 7.5em;
+  font-weight: 900;
+  max-width: 700px;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.hero_links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero_links a {
+  font-size: 1.05em;
+  color: #dedede;
+  padding: 0 12px 0 0px;
+  line-height: 1.5;
+}
+
+.hero_links a:not(:first-child) {
+  padding-left: 8px;
+}
+
+.hero_links a:not(:last-child) {
+  border-right: 2px solid #dedede;
+}
+
+/* footer */
+.footer .subscribe {
+  margin-bottom: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.footer .subscribe_item {
+  position: relative;
+}
+
+.footer .subscribe_item h2 {
+  font-size: 2.25em;
+  color: #cbd3e1;
+}
+
+.footer .subscribe_item p {
+  color: #999caa;
+}
+
+.footer .subscribe input {
+  border-radius: 4px;
+}
+
+.footer .subscribe button {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  padding: 12px 15px 10px;
+  border-radius: 4px;
+}
+
+.quick_link_item .quick_link_title {
+  color: #cbd3e1;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.quick_link_item .footer-list-item {
+  margin-bottom: 10px;
+}
+
+.quick_link_item .footer-list-link,
+#footer_year,
+.footer_bottom a {
+  font-size: 15px;
+  color: #999caa !important;
+}
+
+.quick_link_item.contact > p {
+  margin-bottom: 20px;
+}
+
+.footer_contact_links p {
+  margin-bottom: 10px;
+}
+
+.footer_contact_links p i {
+  margin-right: 4px;
+}
+
+.footer_contact_links p i.fa-phone {
+  transform: rotate(95deg);
+}
+
+.social_links {
+  margin-top: 20px;
+}
+
+.social_links a {
+  margin: 10px 15px 10px 0;
+}
+
+.social_links a i {
+  font-size: 20px;
+}
+
+.quick_link_item .footer-list-link:hover,
+.footer_bottom a:hover {
+  color: #cbd3e1 !important;
+}
+
+.left_contents p {
+  text-align: left;
+  margin-bottom: 0;
+}
+.right_contents p {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 991px) {
+  .header .nav-item-hover:after {
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0px;
+    width: 0%;
+    height: 1.5px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .header .nav-item-hover.active:after {
+    width: 40%;
+  }
+
+  .header .nav-item-child:hover {
+    color: #999caa;
+  }
+
+  .header .nav-item-child:hover:after {
+    width: 40%;
+  }
+
+  .header .nav-item:last-child .nav-item-child {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .navbar {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #hero {
+    padding: 170px 60px 0px 100px;
+  }
+
+  .hero_content {
+    padding-top: 40px;
+  }
+
+  .hero_content h1 {
+    font-size: 6.5em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .hero_content h1 {
+    font-size: 5.75em;
+  }
+
+  .hero_links a {
+    font-size: 1em;
+  }
+
+  #hero {
+    padding: 200px 50px 0px 50px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #hero {
+    padding: 200px 30px 0px 30px;
+  }
+
+  .hero_content h1 {
+    font-size: 4.75em;
+    margin-bottom: 30px;
+  }
+
+  .footer .subscribe {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .hero_content h1 {
+    font-size: 3.75em;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .header .menu-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero_links a {
+    font-size: 0.85em;
+  }
+
+  .left_contents,
+  .right_contents {
+    text-align: center;
+  }
+
+  .left_contents {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .header .menu-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #hero {
+    padding: 200px 15px 0px 15px;
+  }
+  .hero_content h1 {
+    font-size: 3em;
+  }
+}
