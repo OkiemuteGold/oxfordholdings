@@ -1,3 +1,10 @@
+.header .nav-item-hover:after,
+.header .navbar-toggle:hover .toggle-icon,
+.header .navbar-toggle:hover .toggle-icon:after,
+.header .navbar-toggle:hover .toggle-icon:before {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
 .navbar {
   padding-left: 80px;
   padding-right: 80px;
