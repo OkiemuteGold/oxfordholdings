@@ -105,7 +105,13 @@
   border-radius: 4px;
 }
 
+.form-control,
+.form-control:focus {
+  color: #cfcfcf;
+}
+
 a,
+a i,
 button {
   transition: 0.35s ease;
 }
@@ -172,6 +178,7 @@ button {
   color: #cfcfcf;
 }
 
+.social_links a i:hover,
 .quick_link_item .footer-list-link:hover,
 .footer_bottom a:hover {
   color: #fff !important;
