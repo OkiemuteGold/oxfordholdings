@@ -1,0 +1,106 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    rgba(5, 5, 5, 0.5),
+    rgba(5, 5, 5, 0.575),
+    rgba(5, 5, 5, 0.565)
+  );
+  display: flex;
+  align-items: center;
+  padding: 200px 60px 0px 150px;
+}
+
+.hero video {
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(90%) brightness(90%) grayscale(10%);
+}
+
+.hero_content {
+  z-index: 2;
+}
+
+.media_scroll_button {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 21px;
+  cursor: pointer;
+}
+
+.media_scroll_button:hover {
+  -o-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+}
+
+.media_scroll_button svg path {
+  -o-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.media_scroll_button:hover svg path {
+  fill: rgba(255, 0, 0, 0.7);
+}
+
+.media_scroll_button .anim_vertical_line {
+  transform: translateY(4px);
+  opacity: 1;
+  -o-animation: 1.75s linear translate infinite;
+  -moz-animation: 1.75s linear translate infinite;
+  -webkit-animation: 1.75s linear translate infinite;
+  animation: 1.75s linear translate infinite;
+}
+
+/* @-o-keyframes translate 
+@-moz-keyframes translate
+@-webkit-keyframes translate */
+
+@keyframes translate {
+  0% {
+    transform: translateY(0.525px);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(1.525px);
+    opacity: 0.825;
+  }
+  40% {
+    transform: translateY(2.525px);
+    opacity: 0.65;
+  }
+  60% {
+    transform: translateY(3.525px);
+    opacity: 0.475;
+  }
+  80% {
+    transform: translateY(4.525px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(5.525px);
+    opacity: 0.125;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .media_scroll_button {
+    width: 18px;
+  }
+}

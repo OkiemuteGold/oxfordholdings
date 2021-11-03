@@ -1,3 +1,14 @@
+@import url(/css/smooth-scroll.css);
+
+body {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .header .nav-item-hover:after,
 .header .navbar-toggle:hover .toggle-icon,
 .header .navbar-toggle:hover .toggle-icon:after,
@@ -34,7 +45,10 @@ h6 > a:hover,
   width: 90px;
 }
 
-#hero,
+.hero {
+  position: relative;
+}
+
 #page_header {
   height: 100vh;
   background: linear-gradient(
@@ -67,7 +81,7 @@ h6 > a:hover,
 .hero_content h1 {
   font-size: 7.5em;
   font-weight: 900;
-  max-width: 750px;
+  max-width: 780px;
   line-height: 1.1;
   color: #fff;
   margin-bottom: 50px;
@@ -156,7 +170,10 @@ h6 > a:hover,
 a,
 a i,
 button {
-  transition: 0.35s ease;
+  -o-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .footer .subscribe button {
@@ -283,18 +300,18 @@ button {
 .custom_services .custom_ul {
   display: flex;
   flex-wrap: wrap;
-  /* padding-left: 30px; */
 }
 
 .custom_services .custom_ul li {
   padding-right: 25px;
   margin-right: 15px;
   list-style-type: circle;
+  font-size: 16px;
 }
 
 .custom_services .custom_ul li::marker {
   color: rgba(255, 0, 0, 0.7);
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .community_box_container {
@@ -349,6 +366,74 @@ button {
   color: rgba(255, 0, 0, 0.7);
 } */
 
+.partner_image {
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.partner_image img {
+  filter: grayscale(25%) saturate(95%);
+  -o-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.partner_image img:hover {
+  filter: grayscale(0%);
+}
+
+@media screen and (min-width: 1440px) {
+  a.media_scroll_button[aria-label]:after {
+    content: attr(aria-label);
+    position: absolute;
+    top: -35px;
+    left: -100%;
+    transform: translateX(-6px);
+    font-size: 0.875em;
+    font-weight: 600;
+    font-family: "Hind", sans-serif;
+    padding: 3px 6px;
+    line-height: 22px;
+    width: 100%;
+    color: #fff;
+    text-transform: initial;
+    white-space: nowrap;
+    /* -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 4px #999caa;
+    -webkit-box-shadow: 0px 0px 4px #999caa;
+    box-shadow: 0px 0px 4px #999caa;
+    background-image: -moz-linear-gradient(top, #f4f4f4, #eee);
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, #f4f4f4),
+      color-stop(1, #eee)
+    );
+    background-image: -webkit-linear-gradient(top, #f4f4f4, #eee);
+    background-image: -moz-linear-gradient(top, #f4f4f4, #eee);
+    background-image: -ms-linear-gradient(top, #f4f4f4, #eee);
+    background-image: -o-linear-gradient(top, #f4f4f4, #eee); */
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+  }
+
+  a.media_scroll_button[aria-label]:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @media screen and (min-width: 991px) {
   .header .nav-item-hover:after {
     left: 0;
@@ -392,9 +477,9 @@ button {
     padding-right: 30px;
   }
 
-  #hero,
+  .hero,
   #page_header {
-    padding: 170px 60px 0px 100px;
+    padding: 200px 60px 0px 100px;
   }
 
   .hero_content {
@@ -427,7 +512,7 @@ button {
     font-size: 1em;
   }
 
-  #hero,
+  .hero,
   #page_header {
     padding: 200px 50px 0px 50px;
   }
@@ -443,7 +528,7 @@ button {
     padding-right: 0;
   }
 
-  #hero,
+  .hero,
   #page_header {
     padding: 200px 30px 0px 30px;
   }
@@ -486,6 +571,10 @@ button {
   .left_contents {
     margin-bottom: 15px;
   }
+
+  .custom_services .custom_ul {
+    padding-left: 15px;
+  }
 }
 
 @media screen and (max-width: 376px) {
@@ -493,12 +582,12 @@ button {
     padding-left: 0px;
     padding-right: 0px;
   }
-  #hero,
+  .hero,
   #page_header {
     padding: 200px 15px 0px 15px;
   }
   .hero_content h1 {
-    font-size: 3em;
+    font-size: 3.25em;
   }
 
   .main_title.font_lg {
