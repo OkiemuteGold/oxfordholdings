@@ -79,8 +79,8 @@ h6 > a:hover,
 }
 
 #page_header {
-  /* max-height: 550px; */
-  height: initial;
+  /* height: initial; */
+  height: 470px;
   background: url(../img/hero.jpg) no-repeat cover;
 }
 
@@ -178,7 +178,7 @@ h6 > a:hover,
 }
 
 #page_header .hero_content h1 {
-  max-width: 860px;
+  max-width: 900px;
 }
 
 .hero_links {
@@ -512,6 +512,43 @@ button {
   overflow: hidden;
 }
 
+@media screen and (min-width: 991px) {
+  .header .nav-item-hover:after {
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0px;
+    width: 0%;
+    height: 1.5px;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+  }
+
+  .header .nav-item-hover.active:after {
+    width: 40%;
+  }
+
+  /* .header .nav-item-child:hover {
+    color: #999caa;
+  } */
+
+  .header .nav-item-child:hover:after {
+    width: 40%;
+  }
+
+  .header .nav-item:last-child .nav-item-child {
+    padding-right: 20px;
+  }
+
+  #page_header .hero_content {
+    padding-bottom: 60px;
+  }
+
+  #page_header .hero_content h1 {
+    font-size: 5.275em;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   a.media_scroll_button[aria-label]:after {
     content: attr(aria-label);
@@ -542,42 +579,9 @@ button {
     opacity: 1;
     visibility: visible;
   }
-}
-
-@media screen and (min-width: 991px) {
-  .header .nav-item-hover:after {
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: 0px;
-    width: 0%;
-    height: 1.5px;
-    border-radius: 0 0 4px 4px;
-    background-color: #fff;
-  }
-
-  .header .nav-item-hover.active:after {
-    width: 40%;
-  }
-
-  /* .header .nav-item-child:hover {
-    color: #999caa;
-  } */
-
-  .header .nav-item-child:hover:after {
-    width: 40%;
-  }
-
-  .header .nav-item:last-child .nav-item-child {
-    padding-right: 20px;
-  }
-
-  #page_header .hero_content {
-    padding-bottom: 40px;
-  }
 
   #page_header .hero_content h1 {
-    font-size: 6em;
+    font-size: 5.5em;
   }
 }
 
