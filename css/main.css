@@ -3,7 +3,7 @@
 @import url(/css/smooth-scroll.css);
 
 * {
-  font-family: "Hind", "Nunito Sans", sans-serif;
+  font-family: "Hind", "Nunito Sans", sans-serif !important;
 }
 
 body {
