@@ -49,26 +49,38 @@ h6 > a:hover,
   position: relative;
 }
 
+.full_height,
 #page_header {
-  height: 100vh;
   background: linear-gradient(
       to bottom right,
       rgba(5, 5, 5, 0.45),
-      rgba(5, 5, 5, 0.475),
-      rgba(5, 5, 5, 0.465)
+      rgba(5, 5, 5, 0.45),
+      rgba(5, 5, 5, 0.45)
     ),
     url(../img/hero.jpg) no-repeat;
   background-size: cover;
   filter: contrast(90%) brightness(90%);
   display: flex;
   align-items: center;
-  padding: 170px 60px 0px 150px;
+  padding: 200px 60px 0px 150px;
+  overflow: hidden;
+}
+
+.full_height {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.985),
+    rgba(0, 0, 0, 0.985),
+    rgba(0, 0, 0, 0.985)
+  );
+  padding: 0 50px 50px;
 }
 
 #page_header {
   /* max-height: 550px; */
   height: initial;
-  background: url(../img/hero.jpg) no-repeat fill;
+  background: url(../img/hero.jpg) no-repeat cover;
 }
 
 .hero_content {
@@ -78,14 +90,90 @@ h6 > a:hover,
   padding-top: 60px;
 }
 
+.hero_content.about_holdings_content {
+  flex-direction: row;
+  justify-content: space-around;
+  /* align-items: center; */
+  padding: 0;
+}
+
 .hero_content h1 {
   font-size: 7.5em;
   font-weight: 900;
   max-width: 780px;
   line-height: 1.1;
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   padding-left: 8px;
+}
+
+.about_holdings_content_left {
+  /* max-width: 650px; for img tag*/
+  width: 650px;
+  padding: 0 20px 0 20px;
+}
+
+.about_holdings_content_left img.hidden-lg {
+  display: none;
+}
+
+.about_holdings_content_left .description {
+  margin-top: 30px;
+  letter-spacing: 1px;
+}
+
+.about_holdings_content_left .description h3,
+.about_holdings_content_left .description p,
+.about_holdings_content_left .description span {
+  font-weight: 300;
+}
+
+.about_holdings_content_left .description h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.about_holdings_content_left .description p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #dadada;
+}
+.about_holdings_content_left .description span {
+  font-size: 13px;
+  color: #dadada;
+}
+
+.about_holdings_content_left .image_bg {
+  background: url(../img/dr-teniolaa_flip-removebg.png) no-repeat;
+  background-position: 50% top;
+  height: 110%;
+  overflow: hidden;
+}
+
+.about_holdings_content_right {
+  max-width: 750px;
+  padding: 60px 20px 0px;
+}
+
+.about_holdings_content_right p {
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.about_holdings_content_right p.intro {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 45px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #fff;
+  /* text-transform: uppercase; */
+}
+
+.hero_content.about_holdings_content h1 {
+  margin-bottom: 0;
 }
 
 #page_header .hero_content h1 {
@@ -314,6 +402,18 @@ button {
   font-size: 12px;
 }
 
+.core_values_section .service .service-icon {
+  display: block;
+  font-size: 24px;
+  /* color: #999caa; */
+  color: rgba(255, 0, 0, 0.7);
+  border: 2px solid rgba(255, 0, 0, 0.7);
+  width: fit-content;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
 .community_box_container {
   max-width: 700px;
   margin: auto;
@@ -384,11 +484,34 @@ button {
   filter: grayscale(0%);
 }
 
+/* investments */
+.investments_item img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 4px;
+  transition: 0.4s ease-in-out;
+}
+.investments_item img[alt="Oxford International Group"] {
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
+}
+
+.investments_item > div:hover img {
+  transform: scale(1.085);
+}
+
+.investments_item > div > div > div {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 1440px) {
   a.media_scroll_button[aria-label]:after {
     content: attr(aria-label);
     position: absolute;
-    top: -35px;
+    top: -32px;
     left: -100%;
     transform: translateX(-6px);
     font-size: 0.875em;
@@ -400,24 +523,6 @@ button {
     color: #fff;
     text-transform: initial;
     white-space: nowrap;
-    /* -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-shadow: 0px 0px 4px #999caa;
-    -webkit-box-shadow: 0px 0px 4px #999caa;
-    box-shadow: 0px 0px 4px #999caa;
-    background-image: -moz-linear-gradient(top, #f4f4f4, #eee);
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0, #f4f4f4),
-      color-stop(1, #eee)
-    );
-    background-image: -webkit-linear-gradient(top, #f4f4f4, #eee);
-    background-image: -moz-linear-gradient(top, #f4f4f4, #eee);
-    background-image: -ms-linear-gradient(top, #f4f4f4, #eee);
-    background-image: -o-linear-gradient(top, #f4f4f4, #eee); */
     opacity: 0;
     z-index: 99999;
     visibility: hidden;
@@ -489,6 +594,32 @@ button {
   .hero_content h1 {
     font-size: 6.5em;
   }
+
+  .hero_content.about_holdings_content {
+    /* display: grid;
+    grid-template-columns: 450px 1fr; */
+    flex-direction: column;
+  }
+
+  /* .about_holdings_content_left { */
+  /* max-width: 650px; for img tag*/
+  /* width: 650px;
+    padding: 0 20px 0 20px;
+  } */
+
+  .about_holdings_content_left {
+    display: none;
+    /* width: 400px; */
+  }
+
+  /* .about_holdings_content_right {
+    width: 400px;
+  } */
+
+  /* .about_holdings_content_left img.hidden-lg {
+    display: block;
+    margin-top: 280px;
+  } */
 }
 
 @media screen and (max-width: 992px) {
@@ -551,6 +682,15 @@ button {
   .hero_content h1 {
     font-size: 3.75em;
   }
+
+  .full_height {
+    padding: 350px 0 400px;
+    min-height: 100vh;
+  }
+
+  .about_holdings_content_right p.intro {
+    font-size: 1.725em;
+  }
 }
 
 @media screen and (max-width: 426px) {
@@ -592,5 +732,14 @@ button {
 
   .main_title.font_lg {
     font-size: 2.5em;
+  }
+
+  .full_height {
+    padding: 420px 0 450px;
+    min-height: 100vh;
+  }
+
+  .about_holdings_content_right p.intro {
+    font-size: 1.5em;
   }
 }

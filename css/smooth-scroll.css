@@ -2,11 +2,14 @@
   position: relative;
   height: 100vh;
   background: linear-gradient(
-    to bottom right,
-    rgba(5, 5, 5, 0.5),
-    rgba(5, 5, 5, 0.575),
-    rgba(5, 5, 5, 0.565)
-  );
+      to bottom right,
+      rgba(5, 5, 5, 0.5),
+      rgba(5, 5, 5, 0.575),
+      rgba(5, 5, 5, 0.565)
+    )
+    url(../img/hero.jpg) no-repeat;
+  background-size: cover;
+  filter: contrast(90%) brightness(90%);
   display: flex;
   align-items: center;
   padding: 200px 60px 0px 150px;
@@ -25,6 +28,21 @@
   height: 100%;
   object-fit: cover;
   filter: contrast(90%) brightness(90%) grayscale(10%);
+}
+
+/* edge browser */
+@supports (-ms-ime-align: auto) {
+  .hero video {
+    object-fit: none;
+    margin: none;
+    position: inherit;
+    z-index: 1;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    height: auto;
+    width: 100%;
+  }
 }
 
 .hero_content {
