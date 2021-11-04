@@ -63,7 +63,7 @@ h6 > a:hover,
   filter: contrast(90%) brightness(90%);
   display: flex;
   align-items: center;
-  padding: 200px 60px 0px 150px;
+  padding: 180px 60px 0px 150px;
   overflow: hidden;
 }
 
@@ -80,7 +80,7 @@ h6 > a:hover,
 
 #page_header {
   /* height: initial; */
-  height: 470px;
+  height: 450px;
   background: url(../img/hero.jpg) no-repeat cover;
 }
 
@@ -593,7 +593,7 @@ button {
 
   .hero,
   #page_header {
-    padding: 200px 60px 0px 100px;
+    padding: 180px 60px 0px 100px;
   }
 
   .hero_content {
@@ -654,7 +654,7 @@ button {
 
   .hero,
   #page_header {
-    padding: 200px 50px 0px 50px;
+    padding: 180px 50px 0px 50px;
   }
 
   .custom_services .service {
@@ -670,7 +670,7 @@ button {
 
   .hero,
   #page_header {
-    padding: 200px 30px 0px 30px;
+    padding: 180px 30px 0px 30px;
   }
 
   #page_header .hero_content {
@@ -699,6 +699,10 @@ button {
 
   .about_holdings_content_right p.intro {
     font-size: 1.725em;
+  }
+
+  .right_contents p {
+    text-align: left;
   }
 }
 
@@ -733,7 +737,7 @@ button {
   }
   .hero,
   #page_header {
-    padding: 200px 15px 0px 15px;
+    padding: 180px 15px 0px 15px;
   }
   .hero_content h1 {
     font-size: 3.25em;
