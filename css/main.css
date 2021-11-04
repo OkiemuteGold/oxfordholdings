@@ -494,16 +494,20 @@ button {
   border-radius: 4px;
   transition: 0.4s ease-in-out;
 }
+
 .investments_item img[alt="Oxford International Group"] {
   -o-object-fit: scale-down;
   object-fit: scale-down;
 }
 
 .investments_item > div:hover img {
+  -o-transform: scale(1.085);
+  -moz-transform: scale(1.085);
+  -webkit-transform: scale(1.085);
   transform: scale(1.085);
 }
 
-.investments_item > div > div > div {
+.investments_item .image_container {
   overflow: hidden;
 }
 
