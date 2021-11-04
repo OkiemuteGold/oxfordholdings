@@ -4,8 +4,8 @@
   background: linear-gradient(
       to bottom right,
       rgba(5, 5, 5, 0.5),
-      rgba(5, 5, 5, 0.575),
-      rgba(5, 5, 5, 0.565)
+      rgba(5, 5, 5, 0.5),
+      rgba(5, 5, 5, 0.5)
     )
     url(../img/hero.jpg) no-repeat;
   background-size: cover;

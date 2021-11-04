@@ -1,0 +1,118 @@
+.form_container .input,
+.input_label,
+.submit_button {
+  -o-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.hero {
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.hero video {
+  filter: brightness(40%);
+}
+
+.hero_content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.hero_content h1 {
+  max-width: 100%;
+  text-align: center;
+}
+
+.form_container {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  max-width: 700px;
+  padding: 30px;
+  margin: 55px auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.form_container .input {
+  display: block;
+  width: 100%;
+  margin: 0px auto 25px;
+  padding: 12px 16px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  border: none;
+  color: #cfcfcf;
+  z-index: 2;
+}
+
+textarea {
+  resize: vertical;
+  max-height: 200px;
+}
+
+.input_label {
+  position: absolute;
+  left: 25px;
+  top: 7px;
+  padding: 3px 6px 0px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  color: #cfcfcf;
+  border-radius: 4px;
+  cursor: text;
+  z-index: 1;
+}
+
+.input_label span {
+  font-size: 12px;
+  color: #a6a7aa;
+  margin: 0 3px;
+}
+
+.form_container .input:valid ~ .input_label,
+.form_container .input:focus ~ .input_label {
+  top: -12px;
+  left: 16px;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #cfcfcf;
+}
+
+.submit_button {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 16px 8px;
+  background: #cfcfcf;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.submit_button:hover {
+  background: #f00;
+  color: #fff;
+}
+
+@media screen and (max-width: 376px) {
+  .form_container {
+    padding: 30px 20px;
+  }
+}
