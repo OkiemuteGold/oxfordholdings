@@ -9,11 +9,14 @@
 
 .hero {
   background: linear-gradient(
-    to bottom right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  );
+      to bottom right,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url(../img/hero.jpg) no-repeat;
+  background-size: cover;
+  filter: contrast(90%) brightness(90%);
 }
 
 .hero video {
@@ -29,6 +32,9 @@
   margin: auto;
   padding-left: 10px;
   padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero_content h1 {
@@ -101,16 +107,16 @@ textarea {
 .form_container .input:valid ~ .input_label,
 .form_container .input:focus ~ .input_label {
   top: -12px;
-  left: 16px;
+  left: 17px;
   font-size: 12px;
   background-color: rgba(0, 0, 0, 0.85);
   color: #cfcfcf;
 }
 
 .submit_button {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 12px 16px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 16px 8px;
   background: #cfcfcf;
   border: none;
   border-radius: 4px;
