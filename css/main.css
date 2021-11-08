@@ -542,7 +542,7 @@ button {
 }
 
 .leadership_item .description {
-  padding: 0 0 0 5px;
+  padding: 0 5px 0 5px;
 }
 
 .leadership_item .description h3 {
@@ -551,6 +551,7 @@ button {
 
 .leadership_item .description p {
   font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .leadership_item .description span {
