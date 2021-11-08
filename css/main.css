@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap"); */
 
 @import url(/css/smooth-scroll.css);
 
@@ -19,11 +19,16 @@
 body {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  letter-spacing: 0.1275px;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.header .nav-item-hover:hover {
+  opacity: 0.785;
 }
 
 .header .nav-item-hover:after,
@@ -59,7 +64,7 @@ h6 > a:hover,
 }
 
 .header .logo-img {
-  width: 90px;
+  width: 100px;
 }
 
 .hero {
@@ -366,8 +371,17 @@ button {
   font-size: 1.075em;
   /* padding-top: 20px; */
   color: rgba(255, 0, 0, 0.7);
-  text-shadow: 1.5px 1px rgba(0, 0, 0, 0.075);
+  text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.1);
+  /* text-transform: capitalize; */
   letter-spacing: 1px;
+}
+
+.reach_countries .service {
+  padding: 0 0 0px 50px;
+}
+
+.reach_countries .col-sm-3 .service h3 {
+  margin-left: 50px;
 }
 
 .custom_services .service .sub_title {
@@ -501,7 +515,53 @@ button {
   filter: grayscale(0%);
 }
 
+/* leadership */
+.leadership_item .image_container {
+  border: 1px solid #ddd;
+  border-radius: 10px 10px 0 0;
+  /* box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.1); */
+  max-height: 370px;
+}
+
+.leadership_item img {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  -o-object-fit: cover;
+  -o-transition: 0.6s ease-in-out;
+  -moz-transition: 0.6s ease-in-out;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+  min-height: 370px;
+}
+
+.leadership_item > div:hover img {
+  -o-transform: scale(1.15) rotate(-6deg);
+  -moz-transform: scale(1.15) rotate(-6deg);
+  -webkit-transform: scale(1.15) rotate(-6deg);
+  transform: scale(1.15) rotate(-6deg);
+}
+
+.leadership_item .description {
+  padding: 0 0 0 5px;
+}
+
+.leadership_item .description h3 {
+  font-size: 20px;
+}
+
+.leadership_item .description p {
+  font-weight: 600;
+}
+
+.leadership_item .description span {
+  color: #a6a7aa;
+}
+
 /* investments */
+.investments_item h4 a {
+  text-transform: capitalize;
+}
+
 .investments_item img {
   width: 100%;
   height: 180px;
@@ -509,6 +569,9 @@ button {
   object-fit: contain;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 4px;
+  -o-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 
@@ -524,6 +587,7 @@ button {
   transform: scale(1.085);
 }
 
+.leadership_item .image_container,
 .investments_item .image_container {
   overflow: hidden;
 }
@@ -676,6 +740,14 @@ button {
   .custom_services .service {
     padding: 20px;
   }
+
+  .reach_countries .service {
+    padding-bottom: 0;
+  }
+
+  .reach_countries .col-sm-3 .service h3 {
+    margin-left: 0px;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -770,5 +842,15 @@ button {
 
   .about_holdings_content_right p.intro {
     font-size: 1.5em;
+  }
+
+  .reach_countries .service {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .custom_services .custom_ul li {
+    margin-right: 0;
   }
 }
