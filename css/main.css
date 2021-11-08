@@ -543,10 +543,12 @@ button {
 
 .leadership_item .description {
   padding: 0 5px 0 5px;
+  /* text-align: center; */
 }
 
 .leadership_item .description h3 {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .leadership_item .description p {
